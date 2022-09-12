@@ -16,15 +16,8 @@ public class JavaGenerics {
         return max;
     }
 
-    public static void main(String[] args) {
-        UC1_Maximum mx = new UC1_Maximum();
-        System.out.println("Welcome to Generic Practice Problem");
-        mx.findMaxInteger();
-
-    }
-
     public void findMaxInteger() {
-        UC1_Maximum mx = new UC1_Maximum();
+        UC2_Maximum mx = new UC2_Maximum();
         System.out.println("Enter 3 integer numbers: ");
         Scanner sc = new Scanner(System.in);
         int num1 = sc.nextInt();
@@ -33,5 +26,29 @@ public class JavaGenerics {
 
         System.out.println("Maximum integer number is: " + mx.findMax(num1, num2, num3));
     }
+
+    public void findMaxFloat() {
+        UC2_Maximum mx = new UC2_Maximum();
+        System.out.println("Enter 3 float numbers: ");
+        Scanner sc = new Scanner(System.in);
+        float num1 = sc.nextFloat();
+        float num2 = sc.nextFloat();
+        float num3 = sc.nextFloat();
+
+        System.out.println("Maximum float number is: " + mx.findMax(num1, num2, num3));
+    }
+
+    public static void main(String[] args) {
+        UC2_Maximum mx = new UC2_Maximum();
+        System.out.println("Welcome to Generic Practice Problem");
+        // Maximum Integer ->
+        mx.findMaxInteger();
+
+        // Maximum Float ->
+        mx.findMaxFloat();
+
+    }
+
+
 
 }
